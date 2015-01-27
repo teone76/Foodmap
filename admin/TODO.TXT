@@ -1,0 +1,31 @@
+##################################################################
+##  TODO FOODMAPS.ADMIN
+##################################################################
+
+
+###################
+##  PRIORITA' 1  ##
+###################
+
+- [OK] Anteprima della foto scattata
+
+- [OK] In caso di pubblicazione con successo ricaricamento della pagina (o reinizializzazione degli oggetti di offerta e foto)
+
+- Analisi del messaggio di ritorno dalla chiamata REST (controllo effettivo successo o errore)
+
+- Se viene modificata la data iniziale sarebbe il caso modificare anche quella finale (oppure controllo se finale > iniziale)
+
+- [OK] Controllo se date valitdità offerta sono compilate
+
+- [OK] Controllare che la data di fine offerta sia successiva alla data di inizio offerta
+
+
+###################
+##  PRIORITA' 2  ##
+###################
+
+- Impostare il formato di default per i campi date e ora
+
+- Testare il formato numerico (se prevede la valuta) per il campo prezzo
+
+- Impostare l'icona dell'app

@@ -1,6 +1,6 @@
 <ion-view title="Elenco offerte {{address}}">
   <ion-content class="has-header">
-
+{{esercenti}}
 		<ion-list >
 			<div ng-repeat="esercente in esercenti">
 			<ion-item ng-repeat="offerta in esercente.offerte" href="#/app/promotionDetails?esercenteNome={{esercente.nome}}&distance={{esercente.distance}}&class={{offerta.class}}&id={{offerta.id}}&dataFine={{offerta.dataFine}}&dataInizio={{offerta.dataInizio}}&descrizione={{offerta.desrizione}}&prezzo={{offerta.prezzo}}&imageUrl={{offerta.imageUrl}}&titolo={{offerta.titolo}}">   			
