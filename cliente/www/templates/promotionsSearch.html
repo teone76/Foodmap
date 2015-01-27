@@ -1,0 +1,22 @@
+<ion-view title="Promotions Search">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+
+    <label class="item item-input item-stacked-label">
+    <span class="input-label">Address</span>
+    <input type="text" placeholder="My position" ng-model="address"> 
+    <p>{{radius}} km  radius</p>
+  </label>
+
+   <div class="item range ">
+      <input type="range" min="0" max="10" value="5" step="1" ng-model="radius"> 
+  </div>
+  
+  
+  
+<a class="button button-full  ion-search button-dark" ng-href="#/app/promotionsList?address={{address}}&radius={{radius}}000">Search</a>
+   			
+  </ion-content>
+</ion-view>

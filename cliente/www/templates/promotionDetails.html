@@ -1,0 +1,31 @@
+<ion-view title="Dettaglio Offerta">
+  <ion-content class="has-header">
+    <h1>{{params.esercenteNome}} ( {{(params.distance/1000).toFixed(1)}} km) </h1>
+   	<br/>
+   	<a class="button icon-left ion-ios7-telephone button-calm button-outline" ng-href="tel:0543783245">Chiama +39-0453783245</a> 
+    <br/>  
+    <a class="button icon-left ion-email button-calm button-outline" ng-href="mailto:matteo.turci@live.it">Scrivi una mail a matteo.turci@live.it</a> 
+    <br/>  
+    <br/>    
+    <a href="#" onclick="window.open('https://www.google.com/maps/dir/la%20mia%20posizione/44,12', '_system', 'location=yes'); return false;">
+    Indicazioni stradali
+    </a> 
+	<br/>
+  	   	{{params.descrizione}}: {{params.prezzo}} Euro	
+   		<br/>
+   		Dal: {{params.dataInizio.split("T")[0].split("-")[2]}} - {{params.dataInizio.split("T")[0].split("-")[1]}} - {{params.dataInizio.split("T")[0].split("-")[0]}}
+   		<br/>
+   		Ore:{{params.dataInizio.split("T")[1].split(":")[0]}} : {{params.dataInizio.split("T")[1].split(":")[1]}}
+   		<br/>
+   		Al: {{params.dataFine.split("T")[0].split("-")[2]}} - {{params.dataFine.split("T")[0].split("-")[1]}} - {{params.dataFine.split("T")[0].split("-")[0]}}
+   		<br/>
+   		Ore:{{params.dataFine.split("T")[1].split(":")[0]}} : {{params.dataFine.split("T")[1].split(":")[1]}}
+		<br/>
+		<div class="item item-image">
+    		<img src="{{params.imageUrl}}" >
+  		</div>
+  			
+  			
+  			
+  </ion-content>
+</ion-view>

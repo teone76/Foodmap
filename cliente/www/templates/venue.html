@@ -1,0 +1,17 @@
+<ion-view title="Venue Details" >
+  <ion-content class="has-header" >
+    <h1>{{venue.name}} </h1>
+    {{venue.location.formattedAddress}}
+    <h3>{{venue.likes.summary}}</h3>
+       
+        <ion-slide-box selected="activeSlide" on-slide-changed="slideChanged($slideIndex)">
+          <ion-slide ng-repeat="photo in photos"  ng-init="updateSlider()">
+                  <img ng-src="{{photo.prefix}}400x400{{photo.suffix}}"  />  
+          </ion-slide>        
+        </ion-slide-box>
+  
+  
+  </ion-content>
+  
+  
+</ion-view>

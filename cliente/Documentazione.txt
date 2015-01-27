@@ -1,0 +1,15 @@
+Funzionalità "telefono e mail": aggiunte le seguenti righe al file config.xml nella root del progetto
+
+ <access origin="tel:*" launch-external="yes" />
+ <access origin="mailto:*" launch-external="yes" />
+
+Funzionalità "Indicazioni stradali":
+Istallato plugin "cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git" 
+Aggiunt link :
+    <a href="#" onclick="window.open('https://www.google.com/maps/dir/la%20mia%20posizione/44,12', '_system', 'location=yes'); return false;">
+	    Indicazioni stradali
+    </a> 
+
+come da documentazione  " https://blog.nraboy.com/2014/07/launch-external-urls-ionicframework/"
+
+

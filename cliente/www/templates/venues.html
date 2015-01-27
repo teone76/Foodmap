@@ -1,0 +1,28 @@
+<ion-view title="Venues">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+
+  
+  <div class="list">
+  <label class="item item-input item-stacked-label">
+    <span class="input-label"><b>Address<b></h3></span>
+    <input type="text" placeholder="My position" id="addressInput">
+  </label>
+  </div>
+<button class="button button-full  ion-search button-dark" ng-click="updateVenues()">
+  Search
+</button>
+
+
+
+
+		<ion-list>
+		  <ion-item ng-repeat="venue in venues" href="#/app/venues/{{venue.id}}">
+   			<img src="{{venue.categories.0.icon.prefix}}bg_32{{venue.categories.0.icon.suffix}}">
+		    {{venue.name}}
+		  </ion-item>
+		</ion-list>
+  </ion-content>
+</ion-view>

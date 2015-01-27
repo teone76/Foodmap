@@ -1,0 +1,11 @@
+<ion-view title="{{address}}">
+  <ion-content class="has-header">
+
+		<ion-list>
+		  <ion-item ng-repeat="venue in venues" href="#/app/venues/{{venue.id}}">
+   			<img src="{{venue.categories.0.icon.prefix}}bg_32{{venue.categories.0.icon.suffix}}">
+		    {{venue.name}}
+		  </ion-item>
+		</ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,32 @@
+<ion-view title="Elenco offerte {{address}}">
+  <ion-content class="has-header">
+
+		<ion-list >
+			<div ng-repeat="esercente in esercenti">
+			<ion-item ng-repeat="offerta in esercente.offerte" href="#/app/promotionDetails?esercenteNome={{esercente.nome}}&distance={{esercente.distance}}&class={{offerta.class}}&id={{offerta.id}}&dataFine={{offerta.dataFine}}&dataInizio={{offerta.dataInizio}}&descrizione={{offerta.desrizione}}&prezzo={{offerta.prezzo}}&imageUrl={{offerta.imageUrl}}&titolo={{offerta.titolo}}">   			
+   			 {{esercente.nome}} ( {{(esercente.distance/1000).toFixed(1)}} km) 
+   			 <br/>
+  			<br/>
+   			{{offerta.descrizione}}: {{offerta.prezzo}} Euro	
+   			<br/>
+   			Dal: {{offerta.dataInizio.split("T")[0].split("-")[2]}} - {{offerta.dataInizio.split("T")[0].split("-")[1]}} - {{offerta.dataInizio.split("T")[0].split("-")[0]}}
+   			<br/>
+   			Ore:{{offerta.dataInizio.split("T")[1].split(":")[0]}} : {{offerta.dataInizio.split("T")[1].split(":")[1]}}
+   			<br/>
+   			Al: {{offerta.dataFine.split("T")[0].split("-")[2]}} - {{offerta.dataFine.split("T")[0].split("-")[1]}} - {{offerta.dataFine.split("T")[0].split("-")[0]}}
+   			<br/>
+   			Ore:{{offerta.dataFine.split("T")[1].split(":")[0]}} : {{offerta.dataFine.split("T")[1].split(":")[1]}}
+		<br/>
+		 	<div class="item item-image">
+    			<img src="{{offerta.imageUrl}}" >
+  			</div>
+  			
+		  </ion-item>
+   			
+    			
+  								
+			</div>	
+		  
+		</ion-list>
+  </ion-content>
+</ion-view>
